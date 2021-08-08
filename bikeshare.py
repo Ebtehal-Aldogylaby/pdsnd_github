@@ -181,6 +181,8 @@ def user_stats(df,city):
 
 
 def raw_data(city):
+    """Displays raw data for the specified city"""
+
     rdf = pd.read_csv(CITY_DATA[city])
     i = 0
     j = i+5
