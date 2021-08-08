@@ -186,6 +186,7 @@ def raw_data(city):
     j = i+5
     answer = input('\nDo you want to see the first 5 rows from the raw data?(yes or no)\n').lower()
     while answer == "yes":
+        pd.set_option('display.max_columns',200)
         print(rdf[i:j])
         i += 5
         answer = input('\nDo you want to see 5 more rows from the raw data?(yes or no)\n').lower()
