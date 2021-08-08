@@ -138,8 +138,8 @@ def trip_duration_stats(df):
 
     average_travel_time = df['Trip Duration'].mean()
 
-    print('\nThe total travel time is {}\n'.format(total_travel_time))
-    print('\nThe average travel time is {}\n'.format(average_travel_time))
+    print('\nThe total travel time is {} seconds\n'.format(total_travel_time))
+    print('\nThe average travel time is {} seconds\n'.format(average_travel_time))
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -188,6 +188,7 @@ def raw_data(city):
     j = i+5
     answer = input('\nDo you want to see the first 5 rows from the raw data?(yes or no)\n').lower()
     while answer == "yes":
+        pd.set_option('display.max_columns',200)
         print(rdf[i:j])
         i += 5
         answer = input('\nDo you want to see 5 more rows from the raw data?(yes or no)\n').lower()
